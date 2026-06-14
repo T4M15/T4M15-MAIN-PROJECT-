@@ -1,0 +1,27 @@
+from flask import Flask
+from ext import db, login_manager
+from models import User
+from routes import main
+
+def create_app():
+    app = Flask(__name__)
+    app.config['SECRET_KEY'] = 'football2026_secret_key_12345'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///world_cup.db'
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+    db.init_app(app)
+    login_manager.init_app(app)
+    login_manager.login_view = 'main.login'
+    login_manager.login_message_category = 'warning'
+
+    @login_manager.user_loader
+    def load_user(user_id):
+        return User.query.get(int(user_id))
+
+    app.register_blueprint(main)
+
+    return app
+
+if __name__ == '__main__':
+    app = create_app()
+    app.run(debug=True)

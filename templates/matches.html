@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-5 mb-4">
+        <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white"><h4>Create Prediction</h4></div>
+            <div class="card-body">
+                {% if current_user.is_authenticated %}
+                    <form method="POST" action="{{ url_for('main.matches') }}">
+                        {{ form.hidden_tag() }}
+                        <div class="mb-3">
+                            {{ form.match_details.label(class="form-label") }}
+                            {{ form.match_details(class="form-control", placeholder="e.g. Mexico vs South Africa") }}
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                {{ form.home_score.label(class="form-label") }}
+                                {{ form.home_score(class="form-control") }}
+                            </div>
+                            <div class="col">
+                                {{ form.away_score.label(class="form-label") }}
+                                {{ form.away_score(class="form-control") }}
+                            </div>
+                        </div>
+                        <div class="d-grid">
+                            {{ form.submit(class="btn btn-primary") }}
+                        </div>
+                    </form>
+                {% else %}
+                    <div class="text-center py-4">
+                        <p class="text-muted">You must be logged in to access CRUD features.</p>
+                        <a href="{{ url_for('main.login') }}" class="btn btn-outline-primary btn-sm">Go to Login</a>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-7">
+        <div class="card shadow-sm">
+            <div class="card-header bg-secondary text-white"><h4>Your Board (Read/Update/Delete)</h4></div>
+            <div class="card-body">
+                {% if current_user.is_authenticated %}
+                    {% if predictions %}
+                        {% for pred in predictions %}
+                            <div class="border rounded p-3 mb-3 bg-light">
+                                <h5 class="text-primary">{{ pred.match_details }}</h5>
+                                <form method="POST" action="{{ url_for('main.update_prediction', id=pred.id) }}" class="row g-2 align-items-center my-2">
+                                    <div class="col-auto">
+                                        <input type="number" name="home_score" class="form-control form-control-sm text-center" value="{{ pred.predicted_home_score }}" min="0" style="width: 60px;">
+                                    </div>
+                                    <div class="col-auto">:</div>
+                                    <div class="col-auto">
+                                        <input type="number" name="away_score" class="form-control form-control-sm text-center" value="{{ pred.predicted_away_score }}" min="0" style="width: 60px;">
+                                    </div>
+                                    <div class="col-auto ms-auto">
+                                        <button type="submit" class="btn btn-warning btn-sm">Update</button>
+                                </form>
+                                <form method="POST" action="{{ url_for('main.delete_prediction', id=pred.id) }}" class="d-inline col-auto">
+                                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                </form>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% else %}
+                        <p class="text-muted text-center py-3">No predictions submitted yet.</p>
+                    {% endif %}
+                {% else %}
+                    <p class="text-muted text-center py-3">Login to view and manage your predictions list.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

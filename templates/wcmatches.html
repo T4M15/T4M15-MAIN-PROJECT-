@@ -1,0 +1,701 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="text-center fw-bold mb-2">🏆 World Cup 2026 Schedule</h2>
+    <p class="text-center text-muted mb-4">Official Group Stage Fixtures & Match Times</p>
+
+    <ul class="nav nav-pills justify-content-center mb-4 shadow-sm p-2 bg-light rounded" id="matchTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active fw-bold px-4" id="round1-tab" data-bs-toggle="tab" data-bs-target="#round1" type="button" role="tab">Round 1</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link fw-bold px-4" id="round2-tab" data-bs-toggle="tab" data-bs-target="#round2" type="button" role="tab">Round 2</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link fw-bold px-4" id="round3-tab" data-bs-toggle="tab" data-bs-target="#round3" type="button" role="tab">Round 3</button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="matchTabsContent">
+
+        <div class="tab-pane fade show active" id="round1" role="tabpanel">
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group A</span> <small>June 11 | 18:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇲🇽 Mexico vs Czechia 🇨🇿</div>
+                            <small class="text-muted d-block">🏟️ Estadio Azteca, Mexico City</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group A</span> <small>June 11 | 21:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇿🇦 South Africa vs South Korea 🇰🇷</div>
+                            <small class="text-muted d-block">🏟️ SoFi Stadium, Los Angeles</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group B</span> <small>June 12 | 15:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇨🇦 Canada vs Egypt 🇪🇬</div>
+                            <small class="text-muted d-block">🏟️ BC Place, Vancouver</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group B</span> <small>June 12 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇦🇹 Austria vs New Zealand 🇳🇿</div>
+                            <small class="text-muted d-block">🏟️ Lumen Field, Seattle</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-secondary text-white fw-bold d-flex justify-content-between"><span>Group C</span> <small>June 13 | 14:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇪🇸 Spain vs Paraguay 🇵🇾</div>
+                            <small class="text-muted d-block">🏟️ MetLife Stadium, New York</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-secondary text-white fw-bold d-flex justify-content-between"><span>Group C</span> <small>June 13 | 17:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇯🇵 Japan vs Curaçao 🇨🇼</div>
+                            <small class="text-muted d-block">🏟️ Levi's Stadium, San Francisco</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-info text-dark fw-bold d-flex justify-content-between"><span>Group D</span> <small>June 13 | 20:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇺🇸 United States vs Tunisia 🇹🇳</div>
+                            <small class="text-muted d-block">🏟️ AT&T Stadium, Dallas</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-info text-dark fw-bold d-flex justify-content-between"><span>Group D</span> <small>June 14 | 13:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇨🇴 Colombia vs Haiti 🇭🇹</div>
+                            <small class="text-muted d-block">🏟️ NRG Stadium, Houston</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group E</span> <small>June 14 | 16:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇦🇷 Argentina vs Qatar 🇶🇦</div>
+                            <small class="text-muted d-block">🏟️ Hard Rock Stadium, Miami</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group E</span> <small>June 14 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇨🇭 Switzerland vs Jordan 🇯🇴</div>
+                            <small class="text-muted d-block">🏟️ Mercedes-Benz Stadium, Atlanta</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-warning text-dark fw-bold d-flex justify-content-between"><span>Group F</span> <small>June 15 | 15:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇫🇷 France vs Saudi Arabia 🇸🇦</div>
+                            <small class="text-muted d-block">🏟️ Lincoln Financial Field, Philly</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-warning text-dark fw-bold d-flex justify-content-between"><span>Group F</span> <small>June 15 | 18:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇪🇨 Ecuador vs Ghana 🇬🇭</div>
+                            <small class="text-muted d-block">🏟️ Gillette Stadium, Boston</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group G</span> <small>June 16 | 14:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs Uzbekistan 🇺🇿</div>
+                            <small class="text-muted d-block">🏟️ Arrowhead Stadium, Kansas City</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group G</span> <small>June 16 | 17:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇸🇳 Senegal vs Cabo Verde 🇨🇻</div>
+                            <small class="text-muted d-block">🏟️ Lincoln Financial Field, Philly</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group H</span> <small>June 16 | 20:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇧🇷 Brazil vs Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+                            <small class="text-muted d-block">🏟️ MetLife Stadium, New York</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group H</span> <small>June 17 | 13:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇲🇦 Morocco vs Playoff H 🌍</div>
+                            <small class="text-muted d-block">🏟️ Hard Rock Stadium, Miami</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header text-white fw-bold d-flex justify-content-between" style="background-color: #6610f2;"><span>Group I</span> <small>June 17 | 16:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇵🇹 Portugal vs Algeria 🇩🇿</div>
+                            <small class="text-muted d-block">🏟️ SoFi Stadium, Los Angeles</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header text-white fw-bold d-flex justify-content-between" style="background-color: #6610f2;"><span>Group I</span> <small>June 17 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇺🇾 Uruguay vs Playoff I 🌍</div>
+                            <small class="text-muted d-block">🏟️ Levi's Stadium, San Francisco</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group J</span> <small>June 18 | 14:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇳🇱 Netherlands vs Côte d'Ivoire 🇨🇮</div>
+                            <small class="text-muted d-block">🏟️ AT&T Stadium, Dallas</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group J</span> <small>June 18 | 17:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇮🇷 Iran vs Playoff J 🌍</div>
+                            <small class="text-muted d-block">🏟️ NRG Stadium, Houston</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group K</span> <small>June 18 | 20:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇧🇪 Belgium vs Norway 🇳🇴</div>
+                            <small class="text-muted d-block">🏟️ BC Place, Vancouver</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group K</span> <small>June 19 | 13:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇦🇺 Australia vs Playoff K 🌍</div>
+                            <small class="text-muted d-block">🏟️ Lumen Field, Seattle</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group L</span> <small>June 19 | 16:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇩🇪 Germany vs Panama 🇵🇦</div>
+                            <small class="text-muted d-block">🏟️ Mercedes-Benz Stadium, Atlanta</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group L</span> <small>June 19 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇭🇷 Croatia vs Playoff L 🌍</div>
+                            <small class="text-muted d-block">🏟️ Arrowhead Stadium, Kansas City</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="round2" role="tabpanel">
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group A</span> <small>June 21 | 15:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇲🇽 Mexico vs South Korea 🇰🇷</div>
+                            <small class="text-muted d-block">🏟️ AT&T Stadium, Dallas</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group A</span> <small>June 21 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇿🇦 South Africa vs Czechia 🇨🇿</div>
+                            <small class="text-muted d-block">🏟️ NRG Stadium, Houston</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group B</span> <small>June 22 | 16:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇨🇦 Canada vs New Zealand 🇳🇿</div>
+                            <small class="text-muted d-block">🏟️ Levi's Stadium, San Francisco</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group B</span> <small>June 22 | 20:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇦🇹 Austria vs Egypt 🇪🇬</div>
+                            <small class="text-muted d-block">🏟️ SoFi Stadium, Los Angeles</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-secondary text-white fw-bold d-flex justify-content-between"><span>Group C</span> <small>June 23 | 15:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇪🇸 Spain vs Curaçao 🇨🇼</div>
+                            <small class="text-muted d-block">🏟️ BC Place, Vancouver</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-secondary text-white fw-bold d-flex justify-content-between"><span>Group C</span> <small>June 23 | 18:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇯🇵 Japan vs Paraguay 🇵🇾</div>
+                            <small class="text-muted d-block">🏟️ Lumen Field, Seattle</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-info text-dark fw-bold d-flex justify-content-between"><span>Group D</span> <small>June 24 | 16:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇺🇸 United States vs Haiti 🇭🇹</div>
+                            <small class="text-muted d-block">🏟️ MetLife Stadium, New York</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-info text-dark fw-bold d-flex justify-content-between"><span>Group D</span> <small>June 24 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇨🇴 Colombia vs Tunisia 🇹🇳</div>
+                            <small class="text-muted d-block">🏟️ Gillette Stadium, Boston</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group E</span> <small>June 25 | 14:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇦🇷 Argentina vs Jordan 🇯🇴</div>
+                            <small class="text-muted d-block">🏟️ Mercedes-Benz Stadium, Atlanta</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group E</span> <small>June 25 | 17:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇨🇭 Switzerland vs Qatar 🇶🇦</div>
+                            <small class="text-muted d-block">🏟️ Hard Rock Stadium, Miami</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-warning text-dark fw-bold d-flex justify-content-between"><span>Group F</span> <small>June 25 | 20:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇫🇷 France vs Ghana 🇬🇭</div>
+                            <small class="text-muted d-block">🏟️ Arrowhead Stadium, Kansas City</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-warning text-dark fw-bold d-flex justify-content-between"><span>Group F</span> <small>June 26 | 13:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇪🇨 Ecuador vs Saudi Arabia 🇸🇦</div>
+                            <small class="text-muted d-block">🏟️ Lincoln Financial Field, Philly</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group G</span> <small>June 26 | 16:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs Cabo Verde 🇨🇻</div>
+                            <small class="text-muted d-block">🏟️ SoFi Stadium, Los Angeles</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group G</span> <small>June 26 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇸🇳 Senegal vs Uzbekistan 🇺🇿</div>
+                            <small class="text-muted d-block">🏟️ Levi's Stadium, San Francisco</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group H</span> <small>June 27 | 14:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇧🇷 Brazil vs Playoff H 🌍</div>
+                            <small class="text-muted d-block">🏟️ AT&T Stadium, Dallas</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group H</span> <small>June 27 | 17:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇲🇦 Morocco vs Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+                            <small class="text-muted d-block">🏟️ NRG Stadium, Houston</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header text-white fw-bold d-flex justify-content-between" style="background-color: #6610f2;"><span>Group I</span> <small>June 27 | 20:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇵🇹 Portugal vs Playoff I 🌍</div>
+                            <small class="text-muted d-block">🏟️ MetLife Stadium, New York</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header text-white fw-bold d-flex justify-content-between" style="background-color: #6610f2;"><span>Group I</span> <small>June 28 | 13:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇺🇾 Uruguay vs Algeria 🇩🇿</div>
+                            <small class="text-muted d-block">🏟️ Gillette Stadium, Boston</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group J</span> <small>June 28 | 16:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇳🇱 Netherlands vs Playoff J 🌍</div>
+                            <small class="text-muted d-block">🏟️ BC Place, Vancouver</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group J</span> <small>June 28 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇮🇷 Iran vs Côte d'Ivoire 🇨🇮</div>
+                            <small class="text-muted d-block">🏟️ Lumen Field, Seattle</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group K</span> <small>June 29 | 15:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇧🇪 Belgium vs Playoff K 🌍</div>
+                            <small class="text-muted d-block">🏟️ Mercedes-Benz Stadium, Atlanta</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group K</span> <small>June 29 | 18:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇦🇺 Australia vs Norway 🇳🇴</div>
+                            <small class="text-muted d-block">🏟️ Arrowhead Stadium, Kansas City</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group L</span> <small>June 29 | 21:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇩🇪 Germany vs Playoff L 🌍</div>
+                            <small class="text-muted d-block">🏟️ Hard Rock Stadium, Miami</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group L</span> <small>June 30 | 16:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇭🇷 Croatia vs Panama 🇵🇦</div>
+                            <small class="text-muted d-block">🏟️ Estadio Azteca, Mexico City</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="round3" role="tabpanel">
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group A</span> <small>July 2 | 16:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇲🇽 Mexico vs South Africa 🇿🇦</div>
+                            <small class="text-muted d-block">🏟️ SoFi Stadium, Los Angeles</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group A</span> <small>July 2 | 16:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇰🇷 South Korea vs Czechia 🇨🇿</div>
+                            <small class="text-muted d-block">🏟️ Levi's Stadium, San Francisco</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group B</span> <small>July 2 | 20:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇨🇦 Canada vs Austria 🇦🇹</div>
+                            <small class="text-muted d-block">🏟️ Lumen Field, Seattle</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group B</span> <small>July 2 | 20:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇪🇬 Egypt vs New Zealand 🇳🇿</div>
+                            <small class="text-muted d-block">🏟️ BC Place, Vancouver</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-secondary text-white fw-bold d-flex justify-content-between"><span>Group C</span> <small>July 3 | 15:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇪🇸 Spain vs Japan 🇯🇵</div>
+                            <small class="text-muted d-block">🏟️ AT&T Stadium, Dallas</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-secondary text-white fw-bold d-flex justify-content-between"><span>Group C</span> <small>July 3 | 15:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇵🇾 Paraguay vs Curaçao 🇨🇼</div>
+                            <small class="text-muted d-block">🏟️ NRG Stadium, Houston</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-info text-dark fw-bold d-flex justify-content-between"><span>Group D</span> <small>July 3 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇺🇸 United States vs Colombia 🇨🇴</div>
+                            <small class="text-muted d-block">🏟️ Mercedes-Benz Stadium, Atlanta</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-info text-dark fw-bold d-flex justify-content-between"><span>Group D</span> <small>July 3 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇹🇳 Tunisia vs Haiti 🇭🇹</div>
+                            <small class="text-muted d-block">🏟️ Hard Rock Stadium, Miami</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group E</span> <small>July 4 | 14:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇦🇷 Argentina vs Switzerland 🇨🇭</div>
+                            <small class="text-muted d-block">🏟️ MetLife Stadium, New York</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group E</span> <small>July 4 | 14:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇶🇦 Qatar vs Jordan 🇯🇴</div>
+                            <small class="text-muted d-block">🏟️ Gillette Stadium, Boston</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-warning text-dark fw-bold d-flex justify-content-between"><span>Group F</span> <small>July 4 | 18:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇫🇷 France vs Ecuador 🇪🇨</div>
+                            <small class="text-muted d-block">🏟️ Lincoln Financial Field, Philly</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-warning text-dark fw-bold d-flex justify-content-between"><span>Group F</span> <small>July 4 | 18:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇸🇦 Saudi Arabia vs Ghana 🇬🇭</div>
+                            <small class="text-muted d-block">🏟️ Arrowhead Stadium, Kansas City</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group G</span> <small>July 5 | 15:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs Senegal 🇸🇳</div>
+                            <small class="text-muted d-block">🏟️ SoFi Stadium, Los Angeles</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group G</span> <small>July 5 | 15:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇺🇿 Uzbekistan vs Cabo Verde 🇨🇻</div>
+                            <small class="text-muted d-block">🏟️ Levi's Stadium, San Francisco</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group H</span> <small>July 5 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇧🇷 Brazil vs Morocco 🇲🇦</div>
+                            <small class="text-muted d-block">🏟️ BC Place, Vancouver</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-success text-white fw-bold d-flex justify-content-between"><span>Group H</span> <small>July 5 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland vs Playoff H 🌍</div>
+                            <small class="text-muted d-block">🏟️ Lumen Field, Seattle</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header text-white fw-bold d-flex justify-content-between" style="background-color: #6610f2;"><span>Group I</span> <small>July 6 | 14:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇵🇹 Portugal vs Uruguay 🇺🇾</div>
+                            <small class="text-muted d-block">🏟️ AT&T Stadium, Dallas</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header text-white fw-bold d-flex justify-content-between" style="background-color: #6610f2;"><span>Group I</span> <small>July 6 | 14:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇩🇿 Algeria vs Playoff I 🌍</div>
+                            <small class="text-muted d-block">🏟️ NRG Stadium, Houston</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group J</span> <small>July 6 | 18:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇳🇱 Netherlands vs Iran 🇮🇷</div>
+                            <small class="text-muted d-block">🏟️ Mercedes-Benz Stadium, Atlanta</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-dark text-white fw-bold d-flex justify-content-between"><span>Group J</span> <small>July 6 | 18:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇨🇮 Côte d'Ivoire vs Playoff J 🌍</div>
+                            <small class="text-muted d-block">🏟️ Hard Rock Stadium, Miami</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group K</span> <small>July 7 | 15:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇧🇪 Belgium vs Australia 🇦🇺</div>
+                            <small class="text-muted d-block">🏟️ MetLife Stadium, New York</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-primary text-white fw-bold d-flex justify-content-between"><span>Group K</span> <small>July 7 | 15:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇳🇴 Norway vs Playoff K 🌍</div>
+                            <small class="text-muted d-block">🏟️ Gillette Stadium, Boston</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group L</span> <small>July 7 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇩🇪 Germany vs Croatia 🇭🇷</div>
+                            <small class="text-muted d-block">🏟️ Estadio Azteca, Mexico City</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-header bg-danger text-white fw-bold d-flex justify-content-between"><span>Group L</span> <small>July 7 | 19:00</small></div>
+                        <div class="card-body text-center py-3">
+                            <div class="fw-bold mb-2">🇵🇦 Panama vs Playoff L 🌍</div>
+                            <small class="text-muted d-block">🏟️ SoFi Stadium, Los Angeles</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

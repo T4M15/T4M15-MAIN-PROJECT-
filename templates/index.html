@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3 text-center border">
+    <div class="container-fluid py-3">
+        <h1 class="display-4 fw-bold mb-4">FIFA World Cup 2026</h1>
+
+        <div id="superstarCarousel" class="carousel slide carousel-fade mx-auto mb-4 shadow" data-bs-ride="carousel" style="max-width: 800px; border-radius: 15px; overflow: hidden;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#superstarCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#superstarCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#superstarCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="https://media.newyorker.com/photos/63a0b8e018f0244bba9fd613/master/pass/Mochkofsky-Messi.jpg" class="d-block w-100" alt="Lionel Messi" style="height: 450px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block" style="background: rgba(0, 0, 0, 0.5); border-radius: 10px;">
+                        <h5>Lionel Messi</h5>
+                        <p>The legendary champion preparing for the 2026 stage.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="https://editorial.uefa.com/resources/027b-16a6e8afa2a8-7441ca4b9ac5-1000/cristiano_ronaldo_of_portugal_celebrates_after_scoring_a.jpeg" class="d-block w-100" alt="Cristiano Ronaldo" style="height: 450px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block" style="background: rgba(0, 0, 0, 0.5); border-radius: 10px;">
+                        <h5>Cristiano Ronaldo</h5>
+                        <p>The ultimate goal machine targeting the North American stadiums.</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="https://images.ctfassets.net/3mv54pzvptwz/3AuXo0Tu0qboZpWGNORxrX/376bc4d2eef5b9ccc5732927cde5f490/20221209_GETTY_neymar_jr_jogo_brasil_x_croacia_quartas_copa_do_mundo__105_.jpg" class="d-block w-100" alt="Neymar Jr" style="height: 450px; object-fit: cover;">
+                    <div class="carousel-caption d-none d-md-block" style="background: rgba(0, 0, 0, 0.5); border-radius: 10px;">
+                        <h5>Neymar Jr</h5>
+                        <p>Bringing the magic and Brazilian flair to World Cup 2026.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#superstarCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#superstarCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <p class="col-md-8 fs-5 mx-auto text-muted mb-4">Welcome to the ultimate fan dashboard for the 2026 World Cup hosted across North America. Track teams, view standings, and predict match scores!</p>
+
+        {% if not current_user.is_authenticated %}
+            <a class="btn btn-primary btn-lg mb-5" href="{{ url_for('main.register') }}" role="button">Join the Action</a>
+        {% else %}
+            <a class="btn btn-success btn-lg mb-5" href="{{ url_for('main.matches') }}" role="button">Make a Prediction</a>
+        {% endif %}
+
+
+
+        <div class="container text-start mt-4">
+            <h2 class="text-center fw-bold mb-4">Official Tournament Groups</h2>
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group A</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🇲🇽 Mexico</li>
+                            <li class="list-group-item">🇿🇦 South Africa</li>
+                            <li class="list-group-item">🇰🇷 South Korea</li>
+                            <li class="list-group-item">🇨🇿 Czechia</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group B</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🇨🇦 Canada</li>
+                            <li class="list-group-item">🇦🇹 Austria</li>
+                            <li class="list-group-item">🇪🇬 Egypt</li>
+                            <li class="list-group-item">🇳🇿 New Zealand</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group C</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🇪🇸 Spain</li>
+                            <li class="list-group-item">🇯🇵 Japan</li>
+                            <li class="list-group-item">🇵🇾 Paraguay</li>
+                            <li class="list-group-item">🇨🇼 Curaçao</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group D</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🇺🇸 United States</li>
+                            <li class="list-group-item">🇨🇴 Colombia</li>
+                            <li class="list-group-item">🇹🇳 Tunisia</li>
+                            <li class="list-group-item">🇭🇹 Haiti</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group E</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🇦🇷 Argentina</li>
+                            <li class="list-group-item">🇨🇭 Switzerland</li>
+                            <li class="list-group-item">🇶🇦 Qatar</li>
+                            <li class="list-group-item">🇯🇴 Jordan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group F</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🇫🇷 France</li>
+                            <li class="list-group-item">🇪🇨 Ecuador</li>
+                            <li class="list-group-item">🇸🇦 Saudi Arabia</li>
+                            <li class="list-group-item">🇬🇭 Ghana</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group G</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</li>
+                            <li class="list-group-item">🇸🇳 Senegal</li>
+                            <li class="list-group-item">🇺🇿 Uzbekistan</li>
+                            <li class="list-group-item">🇨🇻 Cabo Verde</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group H</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🇧🇷 Brazil</li>
+                            <li class="list-group-item">🇲🇦 Morocco</li>
+                            <li class="list-group-item">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</li>
+                            <li class="list-group-item">🌍 Playoff Winner</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group I</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🇵🇹 Portugal</li>
+                            <li class="list-group-item">🇺🇾 Uruguay</li>
+                            <li class="list-group-item">🇩🇿 Algeria</li>
+                            <li class="list-group-item">🌍 Playoff Winner</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group J</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🇳🇱 Netherlands</li>
+                            <li class="list-group-item">🇮🇷 Iran</li>
+                            <li class="list-group-item">🇨🇮 Côte d'Ivoire</li>
+                            <li class="list-group-item">🌍 Playoff Winner</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group K</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🇧🇪 Belgium</li>
+                            <li class="list-group-item">🇦🇺 Australia</li>
+                            <li class="list-group-item">🇳🇴 Norway</li>
+                            <li class="list-group-item">🌍 Playoff Winner</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-header bg-dark text-white fw-bold">Group L</div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">🇩🇪 Germany</li>
+                            <li class="list-group-item">🇭🇷 Croatia</li>
+                            <li class="list-group-item">🇵🇦 Panama</li>
+                            <li class="list-group-item">🌍 Playoff Winner</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
