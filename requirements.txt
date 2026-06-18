@@ -4,3 +4,4 @@ WTForms~=3.2.2
 Flask-WTF
 gunicorn
 email-validator
+Flask-SQLAlchemy
